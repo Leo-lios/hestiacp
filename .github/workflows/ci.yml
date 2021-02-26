@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main,  feature/1614-make-more-test-and-refacto-CI ]
+    branches: [ main, feature/1614-make-more-test-and-refacto-CI ]
   pull_request:
-    branches: [ main,  feature/1614-make-more-test-and-refacto-CI ]
+    branches: [ main, feature/1614-make-more-test-and-refacto-CI ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,7 +32,7 @@ jobs:
         run: |
           wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
           sudo apt-get update && sudo apt-get install ca-certificates -y
-          sudo bash hst-install.sh -e demo@hestiacp.com -p p4ssw0rd --multiphp yes
+          sudo bash hst-install-ubuntu.sh --force
 
       - name: Setup BATS
         uses: mig4/setup-bats@v1
