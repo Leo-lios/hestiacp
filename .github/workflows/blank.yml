@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ main,  feature/1614-make-more-test-and-refacto-CI ]
   pull_request:
-    branches: [ main ]
+    branches: [ main,  feature/1614-make-more-test-and-refacto-CI ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
