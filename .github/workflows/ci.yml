@@ -32,7 +32,7 @@ jobs:
         run: |
           wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
           sudo apt-get update && sudo apt-get install ca-certificates -y
-          sudo bash hst-install.sh -y
+          sudo bash hst-install-ubuntu.sh -e demo@hestiacp.com -p p4ssw0rd --multiphp yes
 
       - name: Setup BATS
         uses: mig4/setup-bats@v1
