@@ -31,7 +31,7 @@ jobs:
       - name: Run installation
         run: |
           wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
-          apt-get update && apt-get install ca-certificates
+          sudo apt-get update && sudo apt-get install ca-certificates
           bash hst-install.sh
 
       - name: Setup BATS
