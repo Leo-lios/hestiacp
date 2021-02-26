@@ -30,9 +30,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run installation
         run: |
+          sudo -i
           wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
-          sudo apt-get update && sudo apt-get install ca-certificates
-          bash hst-install.sh
+          apt-get update && apt-get install ca-certificates -y
+          bash hst-install.sh -y
 
       - name: Setup BATS
         uses: mig4/setup-bats@v1
